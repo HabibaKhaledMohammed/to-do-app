@@ -1,0 +1,210 @@
+body{
+    margin: 0;
+    padding:0;
+    background-color: rgb(235, 235, 235);
+}
+h1{
+    color: white;
+    font-family: monospace;
+    font-size: 40px;
+}
+.container{
+    width:450px;
+    margin:10% auto;
+    margin-bottom:0 ;
+}
+.top_fixedimage{
+    position: fixed;
+    z-index: -1;
+    top:0;
+}
+#logo{
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+#mode{
+    float: right;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+#mode >img{
+    transition:all 0.3s;
+}
+.top-toggler{
+    height:40px;
+}
+#mode > img{
+    float:right;
+    margin:10px 0;
+}
+.add_item{
+    background-color: white;
+    margin-top:50px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    border-radius: 10px;
+}
+
+
+
+.container_mark {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 10px 0  0 20px;
+    cursor: pointer;
+    user-select: none;
+    width:20px;
+    height: 20px;
+    float: left;
+    
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container_mark input {
+    opacity: 0;
+    display: none;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: inherit;
+    border-radius: 15px ;
+    border:2px solid  rgb(224, 224, 224);
+}
+
+/* On mouse-over, add a grey background color */
+.container_mark:hover input ~ .checkmark {
+  background-color: inherit;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_mark input:checked ~ .checkmark {
+    background: linear-gradient(148deg, rgba(0,212,255,1) 8%, rgba(122,36,167,1) 66%, rgba(94,7,138,1) 100%);
+    border:none;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_mark input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_mark .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}  
+
+.form__field {
+    font-family: inherit;
+    width: 70%;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    color: rgb(165, 164, 164);
+    padding: 13px 0;
+    margin: 0;
+    background: transparent;
+    float: left;
+    font-family: 'Century Gothic';
+    font-weight: normal;
+    text-decoration: none;
+}
+.form__field::placeholder {
+    font-family: 'Century Gothic';
+    color: rgb(165, 164, 164);
+    font-weight: normal;
+  }
+
+.item{
+    background-color: white;
+    margin:0px 0;
+    min-height: 50px;
+    border-radius: 5px ;
+    border-bottom:1px solid rgb(192, 192, 192) ;
+}
+
+h5{
+    color: rgb(197, 197, 197);
+    text-align: center;
+    font-family: 'Josefin Sans';
+}
+.remove{
+    width:20px;
+    float: right;
+    margin:15px 15px 0 15px;
+    cursor: pointer;
+    visibility: hidden;
+    
+}
+.item:hover .remove{
+    visibility: visible;
+}
+.menu{
+    font-size: 13px;
+    font-family: 'Josefin Sans'; 
+    height:50px;
+    background-color: white;
+    border-radius: 5px;
+    border-bottom:1px solid rgb(218, 214, 214) ;
+    color: rgb(112, 112, 112);
+    
+}
+.menu .left_nav{
+    float: left;
+    margin: 15px  0px 0px 15px;
+}
+
+.menu .center_nav{
+     display: inline-block;
+     margin:0px 30px;
+     padding:0px;
+}
+.menu .center_nav >ul{
+    list-style: none;
+    display: inline-block;
+    margin:15px 0px 0px 40px;
+    padding:0;
+}
+.menu .center_nav ul >li{
+    display: inline-block;
+    margin: 0 5px ;
+    cursor: pointer;
+}
+
+.menu .right_nav{
+    float: right;
+    width:100px;
+    margin:0;
+    padding:0;
+    margin:15px 5px;
+    cursor: pointer;
+    
+}

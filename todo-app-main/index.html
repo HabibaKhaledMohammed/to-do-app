@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet"  media="screen" href="css/style.css">
+  <link rel="stylesheet" media="handheld, only screen and (max-device-width: 990px)" href="css/style_mobile.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+ 
+  <title>Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<img src='images/bg-desktop-light.jpg' class='top_fixedimage'>
+  <div class="container">
+    <div class="top-toggler">
+      <h1  id="logo">T O D O</h1>
+      <div  id="mode"><img src="images/icon-moon.svg" id="img_mode"></div>
+    </div>
+    <div class="add_item">
+      <label class="container_mark">
+        <input type="checkbox"  id="myCheckbox" onclick="add_item(this);"/>
+        <span class="checkmark" ></span>
+      </label>
+      <input type="input" class="form__field" placeholder="Create a new todo..."  />
+    </div>
+  <div class="items">
+    <div class="item" draggable="true"  ondrop="drop(this, event)" ondragstart="drag(this)" ondragover="event.preventDefault();" ontouchstart="drag(this)" ontouchmove="touch_move(this, event)" ontouchend="drop_touch(this, event)">
+      <label class="container_mark">
+        <input type="checkbox" onclick="text_change(this)">
+        <span class="checkmark"></span>
+      </label>
+      <label class="form__field" > Love Gang Movie</label>
+      <div class="remove" onclick="remove(this)"> <img src="images/icon-cross.svg"/></div>
+    </div>
+
+    <div class="item" draggable="true"  ondrop="drop(this, event)" ondragstart="drag(this)"  ondragover="event.preventDefault();" ontouchstart="drag(this)" ontouchmove="move_touch(event);" ontouchend="drop_touch(this, event)">
+      <label class="container_mark">
+        <input type="checkbox" onclick="text_change(this)">
+        <span class="checkmark"></span>                   
+      </label>
+      <label class="form__field" > play Music</label>
+      <div class="remove" onclick="remove(this)"> <img src="images/icon-cross.svg"/></div>
+    </div>
+  </div>
+     <div class="menu">
+       <a class="left_nav">5 items left</a>
+       <div class="center_nav">
+         <ul>
+           <li><a onclick="All_ele(this)">All</a></li>
+           <li><a onclick="uncomplete_ele(this)">Active</a></li>
+           <li><a onclick="complete_ele(this)">Completed</a></li>
+         </ul>
+       </div>
+       <a class="right_nav"> clear completed</a>
+     </div>
+    <div class="note"><h5> Drag and Drop to reader list</h5></div>
+  </div>
+  <script src="js/turns.js"></script>
+ 
+</body>
+</html>
