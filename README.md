@@ -10,3 +10,12 @@ Todo app is a to do list for mobile and desktop use with dark and light mode sui
   - clear completed iteams by one click
   - illustration lists (completed, All and uncompleted)
   - show number of exist item in current list
+# live-server on mobile or desktop
+    - start by install live-server in terminal of vscode
+        1. for phone get the address by:
+               1- open the cmd and write ipconfig
+               2- get the IP
+               3- connect the phone to the hotspot of laptop or computer
+        2. run live-server in terminal to see on desktop and phone
+        3. open browser on phone with that ip (from cmd) and port that will apear on desktop when run as (http://192.168.1.2:8080/)
+    
