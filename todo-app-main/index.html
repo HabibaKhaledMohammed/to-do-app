@@ -27,10 +27,10 @@
     </div>
     <div class="add_item">
       <label class="container_mark">
-        <input type="checkbox"  id="myCheckbox" onclick="add_item(this);"/>
+        <input type="checkbox"  id="myCheckbox" />
         <span class="checkmark" ></span>
       </label>
-      <input type="input" class="form__field" placeholder="Create a new todo..."  />
+      <input type="input" class="form__field" placeholder="Create a new todo..." onkeyup="add_item( event)"  />
     </div>
   <div class="items">
     <div class="item" draggable="true"  ondrop="drop(this, event)" ondragstart="drag(this)" ondragover="event.preventDefault();" ontouchstart="drag(this)" ontouchmove="touch_move(this, event)" ontouchend="drop_touch(this, event)">

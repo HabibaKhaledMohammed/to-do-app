@@ -61,10 +61,15 @@ element.onclick = function() { //asign a function
 
 }
 var itm = document.getElementsByClassName("item")[0].cloneNode(true);
-function add_item(el) { 
-    if(el.checked){
-        var text_ = document.getElementsByClassName('form__field')[0].value;
-        if(text_!==''){
+function add_item( event) { 
+    var el=document.getElementById('myCheckbox');
+    var text_ = document.getElementsByClassName('form__field')[0].value;
+    if(text_!='')
+       el.checked =true;
+    else
+       el.checked=false;
+    if (event.keyCode == 13) {
+        if(text_!=''){
         var new_item =itm.cloneNode(true);
         var img =document.getElementById("img_mode").src.split("/");
         if ( img[img.length-1] != "icon-moon.svg")
@@ -72,9 +77,11 @@ function add_item(el) {
         new_item.children[1].innerHTML=text_;
         document.getElementsByClassName("items")[0].appendChild(new_item);
         document.getElementsByClassName("left_nav")[0].innerHTML = itms.length + " items left";
+        document.getElementsByClassName('form__field')[0].value ="";
+        el.checked =false;
         
-        }
     }
+}
 }
 function remove(el) {
     var element  = el.parentNode;
